@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Proveedores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registro de Proveedores 🚛</h1>
+    <form action="#" method="post">
+        <label for="nombre">Nombre de la empresa o persona:</label>
+        <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]{3,}" title="Solo letras y al menos 3 caracteres.">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required pattern="\d{10}" title="Debe contener 10 dígitos.">
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required title="Ingresa un correo válido.">
+
+        <label for="direccion">Dirección:</label>
+        <textarea id="direccion" name="direccion" rows="3" required></textarea>
+
+        <label for="productos">Productos que suministramos:</label>
+        <textarea id="productos" name="productos" rows="3" required></textarea>
+
+        <label for="fecha">Fecha de última compra:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>
